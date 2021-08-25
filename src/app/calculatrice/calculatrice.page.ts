@@ -1,6 +1,7 @@
 // @ts-ignore
 
-import { Component, OnInit , Directive, ViewChild} from '@angular/core';
+import {Component, OnInit, Directive, ViewChild, ElementRef} from '@angular/core';
+import { Renderer2} from "@angular/core";
 
 @Component({
   selector: 'app-calculatrice',
@@ -9,9 +10,18 @@ import { Component, OnInit , Directive, ViewChild} from '@angular/core';
 })
 export class CalculatricePage implements OnInit {
 
-  constructor() {
+  constructor(private render: Renderer2) {
   }
 
   ngOnInit() {
+  }
+
+  clickOnNumber(number){
+    let reponseUser = document.getElementById('reponseUser');
+    console.log(reponseUser.innerHTML);
+    reponseUser.insertAdjacentHTML( 'afterend', '');
+    reponseUser.insertAdjacentHTML( 'afterend', number);
+    let reponse = new ElementRef('reponseUser');
+    console.log(reponse);
   }
 }

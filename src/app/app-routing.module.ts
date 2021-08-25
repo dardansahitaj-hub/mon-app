@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'smarthome',
     loadChildren: () => import('./smarthome/smarthome.module').then( m => m.SmarthomePageModule)
   },
+  {
+    path: 'appareils',
+    loadChildren: () => import('./appareils/appareils.module').then( m => m.AppareilsPageModule)
+  },
 ];
 
 @NgModule({

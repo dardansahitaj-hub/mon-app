@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'account',
     loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
   },
+  {
+    path: 'calculatrice',
+    loadChildren: () => import('./calculatrice/calculatrice.module').then( m => m.CalculatricePageModule)
+  },
+  {
+    path: 'smarthome',
+    loadChildren: () => import('./smarthome/smarthome.module').then( m => m.SmarthomePageModule)
+  },
 ];
 
 @NgModule({

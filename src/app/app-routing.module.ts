@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'appareils',
     loadChildren: () => import('./appareils/appareils.module').then( m => m.AppareilsPageModule)
   },
+  {
+    path: 'single-appareil',
+    loadChildren: () => import('./appareils/single-appareil/single-appareil.module').then(m => m.SingleAppareilPageModule)
+  },
+  {
+    path: 'tab2',
+    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
+  },
 ];
 
 @NgModule({
